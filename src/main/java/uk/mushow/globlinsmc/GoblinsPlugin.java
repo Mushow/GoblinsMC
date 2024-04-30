@@ -2,7 +2,7 @@ package uk.mushow.globlinsmc;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class GoblinsCorePlugin extends JavaPlugin {
+public class GoblinsPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -13,7 +13,5 @@ public class GoblinsCorePlugin extends JavaPlugin {
     public void onDisable() {
         getLogger().info("Goblins plugin disabled");
     }
-
-
 
 }
