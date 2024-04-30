@@ -1,4 +1,4 @@
 name: GoblinsMC
-main: uk.mushow.goblinsmc.GoblinsPlugin
+main: uk.mushow.goblinsmc.GoblinsCorePlugin
 description: The core plugin to GoblinsMC
 version: 1.0-SNAPSHOT
