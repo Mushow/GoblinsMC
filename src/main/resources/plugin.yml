@@ -1,4 +1,4 @@
-name: GoblinsMC
-main: uk.mushow.goblinsmc.GoblinsPlugin
-description: The core plugin to GoblinsMC
+name: Werewolf
+main: uk.mushow.werewolf.WerewolfPlugin
+description: A Werewolf Plugin
 version: 1.0-SNAPSHOT

@@ -1,4 +1,4 @@
-package uk.mushow.goblinsmc.core.data;
+package uk.mushow.werewolf.core.data;
 
 public enum GameState {
 

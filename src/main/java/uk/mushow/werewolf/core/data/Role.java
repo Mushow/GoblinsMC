@@ -1,8 +1,6 @@
-package uk.mushow.goblinsmc.core.data;
+package uk.mushow.werewolf.core.data;
 
 import org.bukkit.ChatColor;
-
-import java.util.Random;
 
 public enum Role {
 
