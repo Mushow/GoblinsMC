@@ -2,6 +2,8 @@ package uk.mushow.werewolf.core.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -26,7 +28,18 @@ public class WerewolfListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         event.setJoinMessage(formatMessage(event.getPlayer().getName(), Bukkit.getOnlinePlayers().size(), "joined"));
 
+        if(Bukkit.getOnlinePlayers().size() == 1) setGameMaster(event.getPlayer());
         checkGameStart();
+    }
+
+    private void setGameMaster(Player player) {
+        gameCycleManager.getRoleManager().setGameMaster(player.getUniqueId());
+        player.sendMessage(ChatColor.ITALIC.toString() + ChatColor.GRAY + "You're now the Game Master. Please choose the roles");
+        giveGameMasterKit(player);
+    }
+
+    private void giveGameMasterKit(Player player) {
+        player.getItemInHand().setType(Material.DRAGON_EGG);
     }
 
     private void checkGameStart() {
